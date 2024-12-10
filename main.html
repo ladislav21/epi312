@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ЭПИ-312 - Главная</title>
+        <link rel="stylesheet" href="styles/main.css">
+    </head>
+
+    <body id="doc-body">
+        <header class="header">
+            <div class="popup-hidden" id="popup-form">
+                <div class="popup-window">
+                    <div id="popup-close-btn" class="popup-close" aria-label="Закрыть форму"></div>
+                    <h3 class="popup-title">Авторизация</h3>
+                    <form action="submit" class="auth-form" id="login-form">
+                        <div class="auth-form__part">
+                            <label for="login" class="auth-form__name">Логин</label>
+                            <input type="text" id="login-field" class="auth-form__field" tabindex="1" required>
+                        </div>
+                        <div class="auth-form__part">
+                            <label for="password" class="auth-form__name">Пароль</label>
+                            <input type="password" id="password-field" class="auth-form__field" tabindex="2" required>
+                        </div>
+                        <button class="auth-button" tabindex="3" >Войти</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="menu">
+                <div class="menu-left">
+                    <a href="#" class="nostyle-link">
+                        <img src="svg/logo.svg" alt="РУТ МИИТ ЛОГОТИП" class="menu-logo">
+                    </a>
+                    <nav class="menu-nav">
+                        <ul class="menu-list">
+                            <li class="menu-item menu-active">
+                                <a href="#" class="nostyle-link">Главная</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="timetable.html" class="nostyle-link">Расписание</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="students.html" class="nostyle-link">Список студентов</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu-right">
+                    <span class="menu-auth">
+                        <a href="#" class="nostyle-link" id="open-popup">Личный кабинет</a>
+                    </span>
+                </div>
+            </div>
+
+            <video autoplay muted loop class="header-video">
+                <source src="video/mainvideo.mp4" type="video/mp4">
+            </video>       
+        </header>
+
+        <main class="main">
+            <section class="last-news">
+                <h2 class="underline-title">Объявления</h2>
+
+                <article class="last-news__card">
+                    <img src="images/last-post1.jpg" alt="Изображение новости" class="last-news__card-img">
+                    <div class="last-news__card-content">
+                        <h2 class="last-news__card-title">
+                            <a href="#" class="nostyle-link">Сайт в процессе разработки</a>
+                        </h2>
+                        <div class="last-news__card-aside">
+                            <time class="last-news__card-date" datetime="2024-11-18">18 ноября 2024</time>
+                            <span class="last-news__card-text">Важное</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="last-news__card">
+                    <img src="images/last-post2.jpg" alt="Изображение новости" class="last-news__card-img">
+                    <div class="last-news__card-content">
+                        <h2 class="last-news__card-title">
+                            <a href="#" class="nostyle-link">Зачётная сессия начнётся 17 декабря</a>
+                        </h2>
+                        <div class="last-news__card-aside">
+                            <time class="last-news__card-date" datetime="2024-11-18">1 декабря 2024</time>
+                            <span class="last-news__card-text">Сессия</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="last-news__card">
+                    <img src="images/last-post3.jpg" alt="Изображение новости" class="last-news__card-img">
+                    <div class="last-news__card-content">
+                        <h2 class="last-news__card-title">
+                            <a href="#" class="nostyle-link">Сайт в процессе разработки</a>
+                        </h2>
+                        <div class="last-news__card-aside">
+                            <time class="last-news__card-date" datetime="2024-11-18">18 ноября 2024</time>
+                            <span class="last-news__card-text">Объявление</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </main>
+        <aside class="main-map">
+            <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A4e5ffd03712a827a6b540006c46a1711484b2ed6d6c0e55925673785b98b254e&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>
+        </aside>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <img src="svg/logo.svg" alt="РУТ МИИТ ЛОГОТИП" class="footer__content-logo">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-list-item footer__menu-list-title">
+                            <a href="main.html" class="nostyle-link">ЭПИ-312</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="timetable.html" class="nostyle-link">Расписание</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="students.html" class="nostyle-link">Список студентов</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-list-title">Полезные ссылки</li>
+                        <li class="footer__menu-list-item">
+                            <a href="https://www.miit.ru/" class="nostyle-link">Сайт РУТ МИИТ</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="https://www.miit-ief.ru/" class="nostyle-link">Сайт ИЭФ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        <section class="error-device-width">
+            <div class="error-device-width__text">Сайт не поддерживается устройством с таким разрешением экрана!</div>
+        </section>
+
+        <script src="scripts/script.js"></script>
+    </body>
+</html>

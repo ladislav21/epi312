@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ЭПИ-312 - Студенты</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/others.css">
+    </head>
+    <body id="doc-body">
+        <header class="header-colored">
+            <div class="popup-hidden" id="popup-form">
+                <div class="popup-window">
+                    <div id="popup-close-btn" class="popup-close" aria-label="Закрыть форму"></div>
+                    <h3 class="popup-title">Авторизация</h3>
+                    <form action="submit" class="auth-form" id="login-form">
+                        <div class="auth-form__part">
+                            <label for="login" class="auth-form__name">Логин</label>
+                            <input type="text" id="login-field" class="auth-form__field" tabindex="1" required>
+                        </div>
+                        <div class="auth-form__part">
+                            <label for="password" class="auth-form__name">Пароль</label>
+                            <input type="password" id="password-field" class="auth-form__field" tabindex="2" required>
+                        </div>
+                        <button class="auth-button" tabindex="3" >Войти</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="menu-colored">
+                <div class="menu-left">
+                    <a href="main.html" class="nostyle-link">
+                        <img src="svg/logo.svg" alt="РУТ МИИТ ЛОГОТИП" class="menu-logo">
+                    </a>
+                    <nav class="menu-nav">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="main.html" class="nostyle-link">Главная</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="timetable.html" class="nostyle-link">Расписание</a>
+                            </li>
+                            <li class="menu-item menu-active">
+                                <a href="students.html" class="nostyle-link">Список студентов</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu-right">
+                    <span class="menu-auth">
+                        <a href="#" class="nostyle-link" id="open-popup">Личный кабинет</a>
+                    </span>
+                </div>
+            </div>      
+        </header>
+        <main class="main">
+            <h2 class="underline-title">Список студентов</h2>
+            <section class="students-list" id="student-page">
+                <!-- <div class="student-card">
+                    <img src="images/nophoto.jpg" alt="Фото студента" class="student-card__picture">
+                    <div class="student-card__content">
+                        <div class="student-card__fullname">ФИО</div>
+                        <div class="student-card__about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eius voluptatibus placeat ipsam vitae unde deleniti fugit voluptatum blanditiis esse numquam provident eligendi, eos officia maiores earum exercitationem. Nam, dolorum! Consequatur?</div>
+                    </div>
+                </div> -->
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <img src="svg/logo.svg" alt="РУТ МИИТ ЛОГОТИП" class="footer__content-logo">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-list-item footer__menu-list-title">
+                            <a href="main.html" class="nostyle-link">ЭПИ-312</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="timetable.html" class="nostyle-link">Расписание</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="students.html" class="nostyle-link">Список студентов</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-list-title">Полезные ссылки</li>
+                        <li class="footer__menu-list-item">
+                            <a href="https://www.miit.ru/" class="nostyle-link">Сайт РУТ МИИТ</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="https://www.miit-ief.ru/" class="nostyle-link">Сайт ИЭФ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        <section class="error-device-width">
+            <div class="error-device-width__text">Сайт не поддерживается устройством с таким разрешением экрана!</div>
+        </section>
+
+        <script src="scripts/script.js"></script>
+        <script src="scripts/studlistscript.js"></script>
+    </body>
+</html>

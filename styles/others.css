@@ -1,0 +1,395 @@
+.header-colored {
+    position: relative;
+    width: 100%;
+    padding: 20px 30px;
+    background-color: #2946a0;
+    color: #afafaf;
+    font-size: 18px;
+    text-transform: uppercase;
+    box-sizing: border-box;
+}
+
+.menu-colored {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.students-list {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.student-card {
+    width: calc(50% - 30px);
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    box-sizing: border-box;
+    margin-bottom: 30px;
+}
+
+.student-card:nth-of-type(2n) {
+    margin-left: 60px;  
+}
+
+.student-card__picture {
+    width: 150px;
+    min-width: 150px;
+    height: 200px;
+    background-color: #afafaf;
+    object-fit: cover;
+}
+
+.student-card__content {
+    margin-left: 25px;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.student-card__fullname {
+    font-size: 24px;
+    margin-bottom: 5px;
+}
+
+.student-card__birthdate {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: #494949;
+    border: 1px dashed #a7a7a7;
+    border-left: 0;
+    border-right: 0;
+}
+
+.student-card__about {
+    margin-top: 5px;
+    line-height: 1.25;
+}
+
+.student-card__bold-title {
+    font-weight: 700;
+    color: #2c2c2c;
+
+}
+
+.timetable {
+    width: 100%;
+    margin-top: 50px;
+    font-size: 16px;
+}
+
+.timetable-info {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+}
+
+.timetable-text {
+    font-size: 20px;
+}
+
+.sem-num {
+    padding-bottom: 5px;
+}
+
+.timetable-controls {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+}
+
+.timetable-week__button {
+    padding: 10px;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 1px solid transparent;
+}
+
+.timetable-week__button:hover {
+    color:#2946a0;
+}
+
+.timetable-week__button-active {
+    border-color: #2946a0;
+    border-radius: 4px;
+}
+
+.timetable-desktop {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.timetable-cell {
+    width: calc((100% - 80px) / 6);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-right: 1px solid #616161;
+    box-sizing: border-box;
+}
+
+.timetable-cell:nth-of-type(n+8) {
+    border-top: 1px solid #dee2e6;
+    padding-bottom: 30px;
+}
+
+.timetable-cell:nth-of-type(7n+1) {
+    width: 80px !important;
+}
+
+.timetable-cell:nth-of-type(7n) {
+    border-right: none;
+}
+
+.timetable-lesson {
+    text-align: right;
+}
+
+.lesson-time {
+    font-size: 14px;
+    color: #939393;
+    margin-top: 5px;
+}
+
+.subject-cell {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+
+.location-cell, .teacher-cell {
+    font-size: 14px;
+    color: #939393;
+}
+
+.profile-header {
+    width: 100%;
+    text-align: center;
+}
+
+.profile-header__sup {
+    font-size: 10px;
+    color: #2946a0;
+}
+
+.profile-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+}
+
+.profile-img-btns {
+    padding-left: 20px;
+    padding-right: 40px;
+    box-sizing: border-box;
+    border-right: 1px solid lightgray;
+
+}
+
+.profile-img {
+    width: 150px;
+    height: 200px;
+    background-color: #afafaf;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.profile-btns {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+}
+
+.profile-btn {
+    margin: 10px 0px;
+    width: 150px;
+    background-color: #f2f2f2;
+    border-style: solid;
+    border-color: #f2f2f2;
+    text-align: center;
+    border-width: 0 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}  
+         
+.profile-btn:hover {
+    border-color: #2946a0;
+    border-top: none;
+    border-bottom: none;
+}
+
+.profile-data__upper {
+    padding: 20px 20px 20px 40px;
+}
+
+.profile-info__row {
+line-height: 1.35;
+}
+
+.profile-info__title {
+padding-right: 50px;
+font-weight: 600;
+color: #4F4F4F;
+}
+
+.profile-data__lower {
+padding-top: 20px;
+padding-right: 20px;
+padding-left: 40px;
+border-top: 1px solid lightgray;
+}
+
+@media (max-width: 1199px) {
+    .menu-colored {
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+    .students-list {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+    
+    .student-card__picture {
+        width: 120px;
+        min-width: 120px;
+        height: 160px;
+    }
+    
+    .student-card__content {
+        margin-left: 20px;
+        padding: 10px;
+    }
+
+    .timetable {
+        font-size: 14px;
+        margin-left: 5px;
+        margin-right: 5px;
+    }
+
+    .timetable-info {
+        margin-left: 70px;
+    }
+
+    .timetable-desktop {
+        min-width: 767px;
+    }
+
+    .timetable-cell:nth-of-type(7n+1) {
+        width: 70px !important;
+    }
+}
+
+@media (max-width: 767px) {
+    .menu-colored {
+        font-size: 18px;
+    }
+
+    .students-list {
+        flex-direction: column;
+    }
+
+    .student-card {
+        width: 100%;
+        margin-left: 0 !important;
+        padding: 0;
+    }
+
+    .timetable {
+        overflow: auto;    
+    }
+}
+
+@media (max-width: 660px) {   
+    .profile-content {
+        flex-wrap: wrap;
+    } 
+
+    .profile-img-btns {
+        display: flex;
+        flex-direction: row;
+        gap: 80px;
+        border: none;
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .profile-data__upper {
+        padding-bottom: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: none;
+    }
+
+    .profile-info__title {
+        border-bottom: 1px dashed lightgray;
+    }
+
+    .profile-info__text {
+        padding-left: 50px;
+        border-bottom: 1px dashed lightgray;
+    }
+
+    .profile-data__lower {
+        margin-bottom: 30px;
+        padding-top: 0;
+        padding-left: 30px;
+        padding-right: 30px;
+        border: none;
+    }
+}
+
+@media (max-width: 525px) {    
+    .menu-colored {
+        font-size: 18px;
+    }
+
+    .student-card__picture {
+        width: 105px;
+        min-width: 105px;
+        height: 140px;
+    }
+
+    .student-card__content {
+        margin-left: 15px;
+        padding: 5px;
+        font-size: 14px;
+    }
+    
+    .student-card__fullname {
+        font-size: 20px;
+    }
+}
+
+@media (max-width: 500px) {    
+    .profile-content {
+        font-size: 14px;
+    }
+
+    .profile-img-btns {
+        padding-right: 30px;
+        padding-left: 30px;
+        gap: 30px;
+        border: none;
+    }
+
+    .profile-info__title {
+        padding-right: 0;
+    }
+
+    .profile-info__text {
+        padding-left: 20px
+    }
+}

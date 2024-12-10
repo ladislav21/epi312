@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>ЭПИ-312 - Расписание</title>
+        <link rel="stylesheet" href="styles/main.css">
+        <link rel="stylesheet" href="styles/others.css">
+    </head>
+    <body id="doc-body">
+        <header class="header-colored">
+            <div class="popup-hidden" id="popup-form">
+                <div class="popup-window">
+                    <div id="popup-close-btn" class="popup-close" aria-label="Закрыть форму"></div>
+                    <h3 class="popup-title">Авторизация</h3>
+                    <form action="submit" class="auth-form" id="login-form">
+                        <div class="auth-form__part">
+                            <label for="login" class="auth-form__name">Логин</label>
+                            <input type="text" id="login-field" class="auth-form__field" tabindex="1" required>
+                        </div>
+                        <div class="auth-form__part">
+                            <label for="password" class="auth-form__name">Пароль</label>
+                            <input type="password" id="password-field" class="auth-form__field" tabindex="2" required>
+                        </div>
+                        <button class="auth-button" tabindex="3" >Войти</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="menu-colored">
+                <div class="menu-left">
+                    <a href="main.html" class="nostyle-link">
+                        <img src="svg/logo.svg" alt="РУТ МИИТ ЛОГОТИП" class="menu-logo">
+                    </a>
+                    <nav class="menu-nav">
+                        <ul class="menu-list">
+                            <li class="menu-item">
+                                <a href="main.html" class="nostyle-link">Главная</a>
+                            </li>
+                            <li class="menu-item menu-active">
+                                <a href="timetable.html" class="nostyle-link">Расписание</a>
+                            </li>
+                            <li class="menu-item">
+                                <a href="students.html" class="nostyle-link">Список студентов</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="menu-right">
+                    <span class="menu-auth">
+                        <a href="#" class="nostyle-link" id="open-popup">Личный кабинет</a>
+                    </span>
+                </div>
+            </div>      
+        </header>
+        <main class="main">
+            <h2 class="underline-title">Расписание</h2>
+            <section class="timetable">
+                <section class="timetable-info">
+                    <div class="timetable-text">
+                        <div class="sem-num">1-й семестр</div>
+                        <div class="sem-year">2024-2025</div>     
+                    </div>
+                    <div class="timetable-controls">
+                        <div class="timetable-week__button timetable-week__button-active" data-weeknum="week1">I неделя</div>
+                        <div class="timetable-week__button" data-weeknum="week2">II неделя</div>
+                    </div>
+                </section>
+
+                <div class="timetable-desktop">
+                    <div class="timetable-day timetable-cell"></div>
+                    <div class="timetable-day timetable-cell">Понедельник</div>
+                    <div class="timetable-day timetable-cell">Вторник</div>
+                    <div class="timetable-day timetable-cell">Среда</div>
+                    <div class="timetable-day timetable-cell">Четверг</div>
+                    <div class="timetable-day timetable-cell">Пятница</div>
+                    <div class="timetable-day timetable-cell">Суббота</div>
+                    <div class="timetable-cell timetable-lesson">
+                        <span class="lesson-number">1 пара</span>
+                        <span class="lesson-time">8:30<br>-<br>9:50</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="mn1">
+                        <span class="location-cell">Ауд. 3301</span>
+                        <span class="subject-cell">Предмет</span>
+                        <span class="teacher-cell">Преподавтель</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="tu1">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="we1">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="th1">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="fr1">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="sa1">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+        
+                    <div class="timetable-cell timetable-lesson">
+                        <span class="lesson-number">2 пара</span>
+                        <span class="lesson-time">10:05<br>-<br>11:25</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="mn2">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="tu2">
+                            <span class="location-cell"></span>
+                            <span class="subject-cell"></span>
+                            <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="we2">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="th2">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="fr2">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="sa2">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+        
+                    <div class="timetable-cell timetable-lesson">
+                        <span class="lesson-number">3 пара</span>
+                        <span class="lesson-time">11:40<br>-<br>13:00</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="mn3">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="tu3">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="we3">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="th3">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="fr3">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="sa3">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+        
+                    <div class="timetable-cell timetable-lesson">
+                        <span class="lesson-number">4 пара</span>
+                        <span class="lesson-time">13:45<br>-<br>15:05</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="mn4">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="tu4">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="we4">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="th4">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="fr4">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="sa4">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+        
+                    <div class="timetable-cell timetable-lesson">
+                        <span class="lesson-number">5 пара</span>
+                        <span class="lesson-time">15:20<br>-<br>16:40</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="mn5">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="tu5">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="we5">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="th5">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="fr5">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="sa5">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+        
+                    <div class="timetable-cell timetable-lesson">
+                        <span class="lesson-number">6 пара</span>
+                        <span class="lesson-time">16:55<br>-<br>18:15</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="mn6">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="tu6">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="we6">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="th6">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="fr6">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="sa6">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+        
+                    <div class="timetable-cell timetable-lesson">
+                        <span class="lesson-number">7 пара</span>
+                        <span class="lesson-time">18:30<br>-<br>19:50</span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="mn7">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Deleniti eaque eveniet expedita sed dolores nulla, eos deserunt atque doloremque iste dolorum dicta aspernatur dolorem. Totam repudiandae libero soluta placeat impedit.</span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="tu7">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="we7">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="th7">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="fr7">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                    <div class="timetable-cell" data-daynum="sa7">
+                        <span class="location-cell"></span>
+                        <span class="subject-cell"></span>
+                        <span class="teacher-cell"></span>
+                    </div>
+                </div>
+
+                <div class="timetable-mobile">
+                    
+                </div>
+            </section>
+        </main>
+
+        <footer class="footer">
+            <div class="footer__content">
+                <img src="svg/logo.svg" alt="РУТ МИИТ ЛОГОТИП" class="footer__content-logo">
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-list-item footer__menu-list-title">
+                            <a href="main.html" class="nostyle-link">ЭПИ-312</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="timetable.html" class="nostyle-link">Расписание</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="students.html" class="nostyle-link">Список студентов</a>
+                        </li>
+                    </ul>
+
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-list-title">Полезные ссылки</li>
+                        <li class="footer__menu-list-item">
+                            <a href="https://www.miit.ru/" class="nostyle-link">Сайт РУТ МИИТ</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="https://www.miit-ief.ru/" class="nostyle-link">Сайт ИЭФ</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+
+        <section class="error-device-width">
+            <div class="error-device-width__text">Сайт не поддерживается устройством с таким разрешением экрана!</div>
+        </section>
+
+        <script src="scripts/script.js"></script>
+    </body>
+</html>
