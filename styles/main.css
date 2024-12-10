@@ -577,7 +577,7 @@ body {
     }
 }
 
-@media (max-width: 360px) {
+/* @media (max-width: 360px) {
     header, main, aside, footer {
         display: none;
     }
@@ -586,4 +586,4 @@ body {
         display: flex;
         text-align: center;
     }
-}
+} */
